@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>blah</title>
+    <script type="application/javascript">
+      document.addEventListener('readystatechange', e => {
+	  if (document.readyState === 'interactive') {
+	      const names = [
+		  '0.mp4',
+		  '1.mp4',
+		  '2.mp4',
+		  '3.mp4',
+	      ];
+	      const video = document.createElement('video');
+	      video.autoplay = true;
+	      video.loop = true;
+	      video.style.width = '100%';
+	      video.style.maxWidth = '100%';
+	      video.style.maxHeight = '100vh';
+	      let i = 0;
+	      video.src = names[i++];
+	      i %= names.length;
+	      document.body.append(video);
+	      setInterval(() => {
+		  video.src = names[i++];
+		  i %= names.length;
+	      }, 4000);
+	  }
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

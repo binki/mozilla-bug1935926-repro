@@ -1,0 +1,1 @@
+See [bug 1935926](https://bugzilla.mozilla.org/show_bug.cgi?id=1935926).
